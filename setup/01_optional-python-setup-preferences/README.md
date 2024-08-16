@@ -1,39 +1,38 @@
-# Python Setup Tips
+# Python设置技巧
 
 
 
-There are several different ways you can install Python and set up your computing environment. Here, I am illustrating my personal preference.
+有几种不同的方法可以安装Python并设置计算环境。在这里，我将说明我的个人偏好。
 
-(I am using computers running macOS, but this workflow is similar for Linux machines and may work for other operating systems as well.)
+ (我使用的是运行macOS的电脑，但这个工作流程适用于Linux机器，也可能适用于其他操作系统。)
 
 
 <br>
 <br>
 
 
-## 1. Download and install Miniforge
+## 1. 下载并安装Miniforge
 
-Download miniforge from the GitHub repository [here](https://github.com/conda-forge/miniforge).
+从GitHub存储库下载miniforge [这里](https://github.com/conda-forge/miniforge).
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/download.png" alt="download" width="600px">
 
-Depending on your operating system, this should download either an `.sh` (macOS, Linux) or `.exe` file (Windows).
+根据您的操作系统，这应该下载一个`.sh` (macOS, Linux)或`.exe`文件(Windows)。
 
-For the `.sh` file, open your command line terminal and execute the following command
+对于`.sh`文件，打开命令行终端并执行以下命令
 
 ```bash
 sh ~/Desktop/Miniforge3-MacOSX-arm64.sh
 ```
 
-where `Desktop/` is the folder where the Miniforge installer was downloaded to. On your computer, you may have to replace it with `Downloads/`.
+`Desktop/`是下载Miniforge安装程序的文件夹。在你的电脑上，你可能要用`Downloads/`替换。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/miniforge-install.png" alt="miniforge-install" width="600px">
 
 Next, step through the download instructions, confirming with "Enter".
+接下来，按照下载说明进行操作，按"Enter"确认。
 
-
-
-If you work with many packages, Conda can be slow because of its thorough but complex dependency resolution process and the handling of large package indexes and metadata. To speed up Conda, you can use the following setting, which switches to a more efficient Rust reimplementation for solving dependencies:
+如果你需要使用很多包，Conda可能很慢，因为它复杂而繁琐的依赖解析过程以及处理大型软件包索引和元数据的处理。为了加快Conda的速度，你可以使用以下设置，它切换到一种更有效的Rust重新实现来解决依赖关系：
 
 ```
 conda config --set solver libmamba
@@ -43,9 +42,9 @@ conda config --set solver libmamba
 <br>
 
 
-## 2. Create a new virtual environment
+## 2. 创建一个新的虚拟环境
 
-After the installation was successfully completed, I recommend creating a new virtual environment called `LLMs`, which you can do by executing
+在安装成功完成后，我建议创建一个名为`LLMs`的新虚拟环境，你可以通过执行以下命令来实现：
 
 ```bash
 conda create -n LLMs python=3.10
@@ -53,9 +52,9 @@ conda create -n LLMs python=3.10
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/new-env.png" alt="new-env" width="600px">
 
-> Many scientific computing libraries do not immediately support the newest version of Python. Therefore, when installing PyTorch, it's advisable to use a version of Python that is one or two releases older. For instance, if the latest version of Python is 3.13, using Python 3.10 or 3.11 is recommended.
+> 许多科学计算库并不立即支持最新版本的Python。因此，在安装PyTorch时，建议使用Python版本稍旧一点的版本。例如，如果最新版本的Python是3.13，建议使用Python 3.10或3.11。
 
-Next, activate your new virtual environment (you have to do it every time you open a new terminal window or tab):
+下一步，激活你的新虚拟环境（每次打开新的终端窗口或标签时都要这样做）：
 
 ```bash
 conda activate LLMs
@@ -66,18 +65,16 @@ conda activate LLMs
 <br>
 <br>
 
-## Optional: styling your terminal
+## 可选：自定义终端样式
 
-If you want to style your terminal similar to mine so that you can see which virtual environment is active,  check out the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) project.
+如果你想让你的终端看起来像我的，可以安装[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)项目。
 
 <br>
 <br>
 
-## 3. Install new Python libraries
+## 3. 安装新的Python库
 
-
-
-To install new Python libraries, you can now use the `conda` package installer. For example, you can install [JupyterLab](https://jupyter.org/install) and [watermark](https://github.com/rasbt/watermark) as follows:
+为了安装新的Python库，你可以使用`conda`包管理器。例如，你可以安装[JupyterLab](https://jupyter.org/install)和[watermark](https://github.com/rasbt/watermark)如下：
 
 ```bash
 conda install jupyterlab watermark
@@ -87,25 +84,25 @@ conda install jupyterlab watermark
 
 
 
-You can also still use `pip` to install libraries. By default, `pip` should be linked to your new `LLms` conda environment:
+你也可以使用`pip`来安装库。默认情况下，`pip`应该链接到你的新`LLms` conda环境：
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/check-pip.png" alt="check-pip" width="600px">
 
 <br>
 <br>
 
-## 4. Install PyTorch
+## 4. 安装PyTorch
 
-PyTorch can be installed just like any other Python library or package using pip. For example:
+可以像安装其他Python库或包一样安装PyTorch。例如：
 
 ```bash
 pip install torch==2.0.1
 ```
 
 However, since PyTorch is a comprehensive library featuring CPU- and GPU-compatible codes, the installation may require additional settings and explanation (see the *A.1.3 Installing PyTorch in the book for more information*).
+然而，由于PyTorch是一个包含CPU和GPU兼容代码的全面库，因此安装可能需要额外的设置和说明（请参阅本书的第A.1.3节获取更多信息）。
 
-It's also highly recommended to consult the installation guide menu on the official PyTorch website at [https://pytorch.org](https://pytorch.org).
-
+也强烈建议参考官方PyTorch网站上的安装指南[https://pytorch.org](https://pytorch.org)。
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/pytorch-installer.jpg" width="600px">
 
 
@@ -115,4 +112,4 @@ It's also highly recommended to consult the installation guide menu on the offic
 
 
 
-Any questions? Please feel free to reach out in the [Discussion Forum](https://github.com/rasbt/LLMs-from-scratch/discussions).
+其他问题？请随时在[讨论区](https://github.com/rasbt/LLMs-from-scratch/discussions)中联系。
