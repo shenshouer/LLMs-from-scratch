@@ -29,7 +29,6 @@ sh ~/Desktop/Miniforge3-MacOSX-arm64.sh
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/miniforge-install.png" alt="miniforge-install" width="600px">
 
-Next, step through the download instructions, confirming with "Enter".
 接下来，按照下载说明进行操作，按"Enter"确认。
 
 如果你需要使用很多包，Conda可能很慢，因为它复杂而繁琐的依赖解析过程以及处理大型软件包索引和元数据的处理。为了加快Conda的速度，你可以使用以下设置，它切换到一种更有效的Rust重新实现来解决依赖关系：
@@ -99,7 +98,6 @@ conda install jupyterlab watermark
 pip install torch==2.0.1
 ```
 
-However, since PyTorch is a comprehensive library featuring CPU- and GPU-compatible codes, the installation may require additional settings and explanation (see the *A.1.3 Installing PyTorch in the book for more information*).
 然而，由于PyTorch是一个包含CPU和GPU兼容代码的全面库，因此安装可能需要额外的设置和说明（请参阅本书的第A.1.3节获取更多信息）。
 
 也强烈建议参考官方PyTorch网站上的安装指南[https://pytorch.org](https://pytorch.org)。
