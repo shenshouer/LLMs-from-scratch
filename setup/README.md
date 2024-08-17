@@ -1,13 +1,14 @@
-# Optional Setup Instructions
+# 可选设置说明
 
 
-This document lists different approaches for setting up your machine and using the code in this repository. I recommend browsing through the different sections from top to bottom and then deciding which approach best suits your needs.
+当前文档列出了设置机器和使用本仓库代码的不同方法。我推荐从上到下浏览不同的章节，然后决定最适合您的需要的方法。
 
 &nbsp;
 
-## Quickstart
+## 快速入门
 
-If you already have a Python installation on your machine, the quickest way to get started is to install the package requirements from the [../requirements.txt](../requirements.txt) file by executing the following pip installation command from the root directory of this code repository:
+如果您已经在您的机器上安装了 Python，那么最快的方法是从本代码仓库的根目录下通过[../requirements.txt](../requirements.txt)文件按如下方式执行pip安装命令来安装依赖项：
+
 
 ```bash
 pip install -r requirements.txt
@@ -15,55 +16,58 @@ pip install -r requirements.txt
 
 &nbsp;
 
-# Local Setup
+# 本地设置
 
-This section provides recommendations for running the code in this book locally. Note that the code in the main chapters of this book is designed to run on conventional laptops within a reasonable timeframe and does not require specialized hardware. I tested all main chapters on an M3 MacBook Air laptop. Additionally, if your laptop or desktop computer has an NVIDIA GPU, the code will automatically take advantage of it.
 
-&nbsp;
-## Setting up Python
-
-If you don't have Python set up on your machine yet, I have written about my personal Python setup preferences in the following directories:
-
-- [01_optional-python-setup-preferences](./01_optional-python-setup-preferences)
-- [02_installing-python-libraries](./02_installing-python-libraries)
-
-The *Using DevContainers* section below outlines an alternative approach for installing project dependencies on your machine.
+这里提供了在本地运行本书代码的建议。注意，本书的主要章节中的代码旨在在合理的时间范围内运行于传统笔记本电脑上，不需要特殊的硬件。我在M3 MacBook Air笔记本电脑上测试了所有主要章节。此外，如果您的笔记本电脑或台式机具有NVIDIA GPU，则代码将自动利用它。
 
 &nbsp;
 
-## Using Docker DevContainers
+## 设置Python
 
-As an alternative to the *Setting up Python* section above, if you prefer a development setup that isolates a project's dependencies and configurations, using Docker is a highly effective solution. This approach eliminates the need to manually install software packages and libraries and ensures a consistent development environment. You can find more instructions for setting up Docker and using a DevContainer:
 
-- [03_optional-docker-environment](03_optional-docker-environment)
+如果您还没有安装Python，我已经在以下目录中写过关于我的个人Python设置偏好：
+
+- [01_可选Python偏好设置](./01_optional-python-setup-preferences)
+- [02_安装Python库](./02_installing-python-libraries)
+
+*使用DevContainers* 部分提供了另一种安装项目依赖项的方法。
+&nbsp;
+
+## 使用Docker DevContainers
+
+作为*设置Python*替代方案，如果您更喜欢使用Docker开发环境隔离项目依赖项和配置，则可以使用Docker。这种方法消除了手动安装软件包和库的需求，并确保一致的开发环境。您可以在[03_optional-docker-environment](./03_optional-docker-environment)中找到有关设置Docker和DevContainer的更多说明。
+
+- [03_可选Docker开发环境设置](03_optional-docker-environment)
 
 &nbsp;
 
-## Visual Studio Code Editor
+## Visual Studio Code 编辑器
 
-There are many good options for code editors. My preferred choice is the popular open-source [Visual Studio Code (VSCode)](https://code.visualstudio.com) editor, which can be easily enhanced with many useful plugins and extensions (see the *VSCode Extensions* section below for more information). Download instructions for macOS, Linux, and Windows can be found on the [main VSCode website](https://code.visualstudio.com).
-
-&nbsp;
-
-## VSCode Extensions
-
-If you are using Visual Studio Code (VSCode) as your primary code editor, you can find recommended extensions in the `.vscode` subfolder. To install these, open the `extensions.json` file in VSCode and click the "Install" button in the pop-up menu on the lower right.
+当前有许多优秀的代码编辑器可供选择。我最喜欢的开源编辑器是[Visual Studio Code (VSCode)](https://code.visualstudio.com)，它可以轻松地通过许多有用的插件和扩展进行增强（有关更多信息，请参阅*VSCode扩展*部分）。macOS、Linux和Windows的下载说明可以在[VSCode主页](https://code.visualstudio.com)上找到。
 
 &nbsp;
 
-# Cloud Resources
+## VSCode 扩展(Extensions)
 
-This section describes cloud alternatives for running the code presented in this book.
-
-While the code can run on conventional laptops and desktop computers without a dedicated GPU, cloud platforms with NVIDIA GPUs can substantially improve the runtime of the code, especially in chapters 5 to 7.
+如果您使用Visual Studio Code作为主要代码编辑器，则可以在`.vscode`子文件夹中找到推荐的扩展。要安装这些扩展，请在VSCode中打开`extensions.json`文件，然后在右下角弹出菜单中单击“安装”按钮。
 
 &nbsp;
 
-## Using Lightning Studio
+# 云资源
 
-For a smooth development experience in the cloud, I recommend the [Lightning AI Studio](https://lightning.ai/) platform, which allows users to set up a persistent environment and use both VSCode and Jupyter Lab on cloud CPUs and GPUs.
+这些部分描述了云替代方案，用于运行本书中所述的代码。
 
-Once you start a new Studio, you can open the terminal and execute the following setup steps to clone the repository and install the dependencies:
+虽然代码可以在没有专用GPU的传统笔记本电脑和台式电脑上运行，但具有NVIDIA GPU的云平台可以显着提高代码的运行时间，特别是在第5到第7章。
+
+&nbsp;
+
+## 使用 Lightning Studio
+
+为了在云中获得顺畅的开发体验，我推荐[Lightning AI Studio](https://lightning.ai/)平台，它允许用户设置持久环境并在云CPU和GPU上使用VSCode和Jupyter Lab。
+
+
+一旦你启动一个新的Studio，你可以打开终端并执行以下设置步骤来克隆仓库并安装依赖项：
 
 ```bash
 git clone https://github.com/rasbt/LLMs-from-scratch.git
@@ -71,27 +75,28 @@ cd LLMs-from-scratch
 pip install -r requirements.txt
 ```
 
-(In contrast to Google Colab, these only need to be executed once since the Lightning AI Studio environments are persistent, even if you switch between CPU and GPU machines.)
+(在Google Colab中，只需执行一次设置步骤，因为Lightning AI Studio环境是持久的，即使在CPU和GPU机器之间切换也是如此。)
 
-Then, navigate to the Python script or Jupyter Notebook you want to run. Optionally, you can also easily connect a GPU to accelerate the code's runtime, for example, when you are pretraining the LLM in chapter 5 or finetuning it in chapters 6 and 7.
+然后，导航到要运行的Python脚本或Jupyter笔记本。如果您想在第5章或第6、7章中加速代码的运行时间，则可以轻松地将GPU连接到环境，例如，在第5章中预训练LLM或在第6、7章中微调LLM。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/README/studio.webp" alt="1" width="700">
 
 &nbsp;
 
-## Using Google Colab
 
-To use a Google Colab environment in the cloud, head over to [https://colab.research.google.com/](https://colab.research.google.com/) and open the respective chapter notebook from the GitHub menu or by dragging the notebook into the *Upload* field as shown in the figure below.
+## 使用 Google Colab
+
+为了在云中使用Google Colab环境，请转到[https://colab.research.google.com/](https://colab.research.google.com/)，然后从GitHub菜单中打开相应的章节笔记本，或者将笔记本拖动到*上传*字段中，如图所示。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/README/colab_1.webp" alt="1" width="700">
 
 
-Also make sure you upload the relevant files (dataset files and .py files the notebook is importing from) to the Colab environment as well, as shown below.
+还要确保将相关文件(数据集文件和笔记本要从其中导入的.py文件)上传到Colab环境，如下所示。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/README/colab_2.webp" alt="2" width="700">
 
 
-You can optionally run the code on a GPU by changing the *Runtime* as illustrated in the figure below.
+你还可以选择在GPU上运行代码，方法是将*Runtime*更改为如下所示。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/README/colab_3.webp" alt="3" width="700">
 
@@ -99,5 +104,6 @@ You can optionally run the code on a GPU by changing the *Runtime* as illustrate
 &nbsp;
 
 # Questions?
+# 疑问？
 
-If you have any questions, please don't hesitate to reach out via the [Discussions](https://github.com/rasbt/LLMs-from-scratch/discussions) forum in this GitHub repository.
+如果你有任何问题，请不要犹豫，通过本GitHub仓库的[Discussions](https://github.com/rasbt/LLMs-from-scratch/discussions)论坛与我联系。
