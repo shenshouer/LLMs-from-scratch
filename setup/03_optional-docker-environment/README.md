@@ -34,7 +34,7 @@ cd LLMs-from-scratch
 mv setup/03_optional-docker-environment/.devcontainer ./
 ```
 
-3. 在Docker Desktop中，确保**_desktop-linux_ builder**正在运行且将用于构建Docker容器（请参阅 _Docker Desktop_ -> _Change settings_ -> _Builders_ -> _desktop-linux_ -> _..._ -> _Use_）。
+3. 在Docker Desktop中，确保 **_desktop-linux_ builder** 正在运行且将用于构建Docker容器（请参阅 _Docker Desktop_ -> _Change settings_ -> _Builders_ -> _desktop-linux_ -> _..._ -> _Use_）。
 
 
 4. 如果你有[支持CUDA的GPU](https://developer.nvidia.com/cuda-gpus)，你可以加速训练和推理：
@@ -76,7 +76,7 @@ mv setup/03_optional-docker-environment/.devcontainer ./
 
 5. 在终端中输入`code .`以在VS Code中打开项目。或者，你可以从UI中选择要打开的项目来启动VS Code。
 
-6. 从VS Code的左侧_Extensions_菜单中选择安装**Remote-Containers** 扩展
+6. 从VS Code的左侧_Extensions_菜单中选择安装 **Remote-Containers** 扩展
 
 7. 打开DevContainer
 
@@ -95,14 +95,13 @@ mv setup/03_optional-docker-environment/.devcontainer ./
 
 9. 完成。
 
-Once the image has been pulled and built, you should have your project mounted inside the container with all the packages installed, ready for development.
 一旦镜像被拉取并构建完成，你应该能够在容器中看到你的项目，并且已经安装了所有需要的依赖项，可以开始开发了。
 
 <br>
 
 ## 卸载Docker镜像
 
-Below are instructions for uninstalling or removing a Docker container and image if you no longer plan to use it. This process does not remove Docker itself from your system but rather cleans up the project-specific Docker artifacts.
+
 如果不再需要使用它，以下是卸载或删除Docker容器和镜像的说明。这个过程不会从你的系统中卸载Docker本身，而是清理了项目特定的Docker工件。
 
 
