@@ -102,7 +102,7 @@ git clone --depth 1 https://github.com/rasbt/LLMs-from-scratch.git
   - [Docker环境设置向导](setup/03_optional-docker-environment)
 - **章节 2:**
   - [比较各种字节对编码 (BPE) 实现](ch02/02_bonus_bytepair-encoder)
-  - [Understanding the Difference Between Embedding Layers and Linear Layers](ch02/03_bonus_embedding-vs-matmul)
+  - [理解嵌入层和线性层的区别](ch02/03_bonus_embedding-vs-matmul)
   - [使用简单数字理解数据加载器](ch02/04_bonus_dataloader-intuition)
 - **章节 3:**
   - [比较高效的多头注意力实现](ch03/02_bonus_efficient-multihead-attention/mha-implementations.ipynb)
