@@ -1,23 +1,24 @@
-# Installing Python Packages and Libraries Used In This Book
+# 安装本书所用Python库和包
 
-This document provides more information on double-checking your installed Python version and packages. (Please see the [../01_optional-python-setup-preferences](../01_optional-python-setup-preferences) folder for more information on installing Python and Python packages.)
 
-I used the following libraries listed [here](https://github.com/rasbt/LLMs-from-scratch/blob/main/requirements.txt) for this book. Newer versions of these libraries are likely compatible as well. However, if you experience any problems with the code, you can try these library versions as a fallback.
+当前文档提供有关检查已安装的Python版本和包的更多信息。（请参阅[../01_可选Python偏好设置](../01_optional-python-setup-preferences)文件夹中的更多信息，以了解有关安装Python和Python包的详细信息。）
 
-To install these requirements most conveniently, you can use the `requirements.txt` file in the root directory for this code repository and execute the following command:
+我们使用了[这里](https://github.com/rasbt/LLMs-from-scratch/blob/main/requirements.txt)列出的库来编写本书。这些库的较新版本也可能兼容。但是，如果您遇到代码问题，则可以尝试这些库版本作为备用方案。
+
+为了更方便地安装这些依赖，您可以从本代码库的根目录使用`requirements.txt`文件并执行以下命令：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Alternatively, you can install it via the GitHub URL as follows:
+或者，您也可以通过GitHub URL安装：
 
 ```bash
 pip install -r https://raw.githubusercontent.com/rasbt/LLMs-from-scratch/main/requirements.txt
 ```
 
 
-Then, after completing the installation, please check if all the packages are installed and are up to date using
+然后，完成安装后，请检查所有包是否已安装且是最新版本。您可以使用以下命令：
 
 ```bash
 python python_environment_check.py
@@ -25,15 +26,18 @@ python python_environment_check.py
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/02_installing-python-libraries/check_1.jpg" width="600px">
 
-It's also recommended to check the versions in JupyterLab by running the `python_environment_check.ipynb` in this directory, which should ideally give you the same results as above.
+
+这里也建议在JupyterLab中检查版本，方法是运行本目录中的`python_environment_check.ipynb`，理想情况下应该与上述结果相同。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/02_installing-python-libraries/check_2.jpg" width="500px">
 
-If you see the following issues, it's likely that your JupyterLab instance is connected to wrong conda environment:
+
+如果您看到以下问题，则可能是JupyterLab实例连接到错误的conda环境：
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/02_installing-python-libraries/jupyter-issues.jpg" width="450px">
 
-In this case, you may want to use `watermark` to check if you opened the JupyterLab instance in the right conda environment using the `--conda` flag:
+
+在这种情况下，您可能需要使用`watermark`来检查您是否在正确的conda环境中打开了JupyterLab实例，方法是使用`--conda`选项：
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/02_installing-python-libraries/watermark.jpg" width="350px">
 
@@ -42,17 +46,18 @@ In this case, you may want to use `watermark` to check if you opened the Jupyter
 <br>
 
 
-## Installing PyTorch
+## 安装PyTorch
 
-PyTorch can be installed just like any other Python library or package using pip. For example:
+PyTorch可以像其他Python库或包一样使用pip进行安装。例如：
 
 ```bash
 pip install torch==2.0.1
 ```
 
-However, since PyTorch is a comprehensive library featuring CPU- and GPU-compatible codes, the installation may require additional settings and explanation (see the *A.1.3 Installing PyTorch in the book for more information*).
+不过，由于PyTorch是一个包含CPU和GPU兼容代码的综合库，因此安装可能需要其他设置和说明（请参阅本书的*A.1.3 Installing PyTorch*部分以获取更多信息）。
 
-It's also highly recommended to consult the installation guide menu on the official PyTorch website at [https://pytorch.org](https://pytorch.org).
+
+这里也强烈建议阅读PyTorch官方网站上的安装指南：[https://pytorch.org](https://pytorch.org)。
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/02_installing-python-libraries/pytorch-installer.jpg" width="600px">
 
@@ -63,4 +68,4 @@ It's also highly recommended to consult the installation guide menu on the offic
 
 
 
-Any questions? Please feel free to reach out in the [Discussion Forum](https://github.com/rasbt/LLMs-from-scratch/discussions).
+任何问题？请随时在[讨论论坛](https://github.com/rasbt/LLMs-from-scratch/discussions)中联系我们。
