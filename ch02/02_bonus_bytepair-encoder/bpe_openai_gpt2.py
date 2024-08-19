@@ -5,18 +5,29 @@
 # Software Copyright (c) 2019 OpenAI
 
 # We don’t claim ownership of the content you create with GPT-2, so it is yours to do with as you please.
+# 我们不承担由您创建的 GPT-2 内容的所有权，因此您可以随意使用。
 # We only ask that you use GPT-2 responsibly and clearly indicate your content was created using GPT-2.
+# 我们只要求您使用 GPT-2 保守地表示您的内容是使用 GPT-2 已经创建的。
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
 # associated documentation files (the "Software"), to deal in the Software without restriction,
 # including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 # and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
 # subject to the following conditions:
+# 特此免费授予任何获得此软件副本的人许可，以及
+# 相关文档文件（“软件”），用于无限制地处理软件，
+# 包括但不限于使用、复制、修改、合并、发布、分发、再许可的权利，
+# 和/或出售软件的副本，并允许获得软件的人这样做，
+# 符合以下条件：
 
 # The above copyright notice and this permission notice shall be included
 # in all copies or substantial portions of the Software.
 # The above copyright notice and this permission notice need not be included
 # with content created by the Software.
+# 应包括上述版权声明和本许可声明
+# 软件的所有副本或实质性部分。
+# 上述版权声明和本许可声明不需要包含在内
+# 由软件创建的内容。
 
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
 # INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -37,7 +48,9 @@ from functools import lru_cache
 def bytes_to_unicode():
     """
     Returns list of utf-8 byte and a corresponding list of unicode strings.
+    返回 utf-8 字节和相应的列表的 unicode 字符串。
     The reversible bpe codes work on unicode strings.
+    可逆的 bpe 编码使用 unicode 字符串。
     This means you need a large # of unicode characters in your vocab if you want to avoid UNKs.
     When you're at something like a 10B token dataset you end up needing around 5K for decent coverage.
     This is a significant percentage of your normal, say, 32K bpe vocab.
