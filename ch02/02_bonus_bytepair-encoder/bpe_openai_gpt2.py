@@ -48,14 +48,20 @@ from functools import lru_cache
 def bytes_to_unicode():
     """
     Returns list of utf-8 byte and a corresponding list of unicode strings.
-    返回 utf-8 字节和相应的列表的 unicode 字符串。
     The reversible bpe codes work on unicode strings.
-    可逆的 bpe 编码使用 unicode 字符串。
     This means you need a large # of unicode characters in your vocab if you want to avoid UNKs.
     When you're at something like a 10B token dataset you end up needing around 5K for decent coverage.
     This is a significant percentage of your normal, say, 32K bpe vocab.
     To avoid that, we want lookup tables between utf-8 bytes and unicode strings.
     And avoids mapping to whitespace/control characters the bpe code barfs on.
+
+    返回 utf-8 字节列表和相应的 unicode 字符串列表。
+    可逆 bpe 代码适用于 unicode 字符串。
+    这意味着如果你想避免 UNK，你的词汇中需要大量的 unicode 字符。
+    当您使用 10B 令牌数据集时，您最终需要大约 5K 才能获得适当的覆盖范围。
+    这是您正常词汇量（例如 32K bpe）词汇量的很大一部分。
+    为了避免这种情况，我们需要 utf-8 字节和 unicode 字符串之间的查找表。
+    并避免映射到 BPE 代码中的空白/控制字符
     """
     bs = list(range(ord("!"), ord("~") + 1)) + list(range(ord("¡"), ord("¬") + 1)) + list(range(ord("®"), ord("ÿ") + 1))
     cs = bs[:]
@@ -73,6 +79,8 @@ def get_pairs(word):
     """
     Return set of symbol pairs in a word.
     Word is represented as tuple of symbols (symbols being variable-length strings).
+    返回单词中的符号对集合。
+    单词被表示为符号元组（符号是可变长度的字符串）。
     """
     pairs = set()
     prev_char = word[0]
@@ -93,6 +101,7 @@ class Encoder:
         self.cache = {}
 
         # Should have added re.IGNORECASE so BPE merges can happen for capitalized versions of contractions
+        # 应该添加 re.IGNORECASE 以便 BPE 合并可以针对大写版本的缩写进行
         self.pat = re.compile(r"""'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+""")
 
     def bpe(self, token):
@@ -173,6 +182,7 @@ def download_vocab():
             chunk_size = 1000
             with tqdm(ncols=100, desc="Fetching " + filename, total=file_size, unit_scale=True) as pbar:
                 # 1k for chunk_size, since Ethernet packet size is around 1500 bytes
+                # chunk_size 为 1k，因为以太网数据包大小约为 1500 字节
                 for chunk in r.iter_content(chunk_size=chunk_size):
                     f.write(chunk)
                     pbar.update(chunk_size)
