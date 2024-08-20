@@ -1,10 +1,10 @@
-# Understanding PyTorch Buffers
+# 理解PyTorch缓冲区
 
-- [understanding-buffers.ipynb](understanding-buffers.ipynb) explains the idea behind PyTorch buffers, which are used to implement the causal attention mechanism in chapter 3
+- [understanding-buffers.ipynb](understanding-buffers.ipynb) 解释PyTorch缓冲区背后的思想，在第3章中使用它来实现因果注意机制
 
 
 <br>
-Below is a hands-on video tutorial I recorded to explain the code:
+下面是我录制的用于解释代码的动手视频教程：
 
 <br>
 <br>
