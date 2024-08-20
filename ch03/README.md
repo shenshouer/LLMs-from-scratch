@@ -1,10 +1,11 @@
 # Chapter 3: Coding Attention Mechanisms
+# 章节 3：编码注意力机制
 
-## Main Chapter Code
+## 主章节代码
 
 - [01_main-chapter-code](01_main-chapter-code) contains the main chapter code.
 
-## Bonus Materials
+## 额外资料
 
-- [02_bonus_efficient-multihead-attention](02_bonus_efficient-multihead-attention) implements and compares different implementation variants of multihead-attention
-- [03_understanding-buffers](03_understanding-buffers) explains the idea behind PyTorch buffers, which are used to implement the causal attention mechanism in chapter 3
+- [02_bonus_efficient-multihead-attention](02_bonus_efficient-multihead-attention) 实现并比较多头注意力的多种变体
+- [03_understanding-buffers](03_understanding-buffers) 解释了 PyTorch 缓冲区背后的概念，这些缓冲区用于在第三章实现因果注意力机制
