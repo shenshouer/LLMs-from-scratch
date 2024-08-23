@@ -1,10 +1,10 @@
-# Chapter 4: Implementing a GPT Model from Scratch to Generate Text
+# 章节4：从零开始实现GPT模型，用于生成文本
 
-## Main Chapter Code
+### 主章节代码
 
-- [01_main-chapter-code](01_main-chapter-code) contains the main chapter code.
+- [01_main-chapter-code](01_main-chapter-code) 包含了主章节代码
 
-## Optional Code
+### 额外代码
 
-- [02_performance-analysis](02_performance-analysis) contains optional code analyzing the performance of the GPT model(s) implemented in the main chapter.
+- [02_performance-analysis](02_performance-analysis) 包含了可选的代码，用于分析主章节中实现的GPT模型的性能。
 
