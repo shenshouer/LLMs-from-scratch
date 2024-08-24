@@ -1,5 +1,5 @@
-# Alternative Approaches to Loading Pretrained Weights
+# 加载预训练权重的替代方法
 
-This folder contains alternative weight loading strategies in case the weights become unavailable from OpenAI.
+这个文件夹包含了在OpenAI不可用的情况下加载预训练权重的替代方法。
 
-- [weight-loading-hf-transformers.ipynb](weight-loading-hf-transformers.ipynb): contains code to load the weights from the Hugging Face Model Hub via the `transformers` library
+- [weight-loading-hf-transformers.ipynb](weight-loading-hf-transformers.ipynb): [weight-loading-hf-transformers.ipynb](weight-loading-hf-transformers.ipynb)：包含了通过`transformers`库从Hugging Face Model Hub加载权重的代码。

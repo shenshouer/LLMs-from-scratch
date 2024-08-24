@@ -1,14 +1,14 @@
-# Chapter 5: Pretraining on Unlabeled Data
+# 章节 5：在无标签数据上预训练模型
 
-### Main Chapter Code
+### 主章节代码
 
-- [ch05.ipynb](ch05.ipynb) contains all the code as it appears in the chapter
-- [previous_chapters.py](previous_chapters.py) is a Python module that contains the `MultiHeadAttention` module and `GPTModel` class from the previous chapters, which we import in [ch05.ipynb](ch05.ipynb) to pretrain the GPT model
-- [gpt_download.py](gpt_download.py) contains the utility functions for downloading the pretrained GPT model weights
-- [exercise-solutions.ipynb](exercise-solutions.ipynb) contains the exercise solutions for this chapter
+- [ch05.ipynb](ch05.ipynb) 包含本章节中出现的所有代码
+- [previous_chapters.py](previous_chapters.py) 是一个 Python 模块，其中包含了前一章节中出现的 `MultiHeadAttention` 模块和 `GPTModel` 类，我们在 [ch05.ipynb](ch05.ipynb) 中导入它来预训练 GPT 模型
+- [gpt_download.py](gpt_download.py) 包含了下载预训练 GPT 模型权重的实用函数
+- [exercise-solutions.ipynb](exercise-solutions.ipynb) 包含本章节练习解答
 
-### Optional Code
+### 额外代码
 
-- [gpt_train.py](gpt_train.py) is a standalone Python script file with the code that we implemented in [ch05.ipynb](ch05.ipynb) to train the GPT model (you can think of it as a code file summarizing this chapter)
-- [gpt_generate.py](gpt_generate.py) is a standalone Python script file with the code that we implemented in [ch05.ipynb](ch05.ipynb) to load and use the pretrained model weights from OpenAI
+- [gpt_train.py](gpt_train.py) 是一个独立的Python脚本文件，包含了我们在 [ch05.ipynb](ch05.ipynb) 中实现的用于训练GPT模型的代码（您可以将其视为总结本章内容的代码文件）
+- [gpt_generate.py](gpt_generate.py) 是一个独立的Python脚本文件，包含了我们在 [ch05.ipynb](ch05.ipynb) 中实现的用于加载和使用来自OpenAI的预训练模型权重的代码 
 
