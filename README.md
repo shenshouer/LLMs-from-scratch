@@ -45,7 +45,7 @@ git clone --depth 1 https://github.com/rasbt/LLMs-from-scratch.git
 <br>
 <!--  -->
 
-> [!提示]
+> [!Note]
 
 > 如果你需要安装Python和Python包并设置代码环境的指导，建议阅读[setup](setup)目录下的[README.md](setup/README.md)文件。
 > 

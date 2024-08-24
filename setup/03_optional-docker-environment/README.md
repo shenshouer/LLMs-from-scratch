@@ -90,10 +90,10 @@ mv setup/03_optional-docker-environment/.devcontainer ./
 
 一旦完成，VS Code将在新创建的Docker开发环境中自动连接到容器并重新打开项目，就像在本地机器上运行一样。你将能够像在本地机器上一样编写、执行和调试代码，但有了Docker的隔离和一致性的好处。
 
-> [!警告]
+> [!WARNING]
 > 如果你在构建过程中遇到错误，这可能是因为你的机器不支持NVIDIA容器工具集，你的机器没有兼容的GPU。在这种情况下，编辑`devcontainer.json`文件并删除` "runArgs": ["--runtime=nvidia", "--gpus=all"],`行，然后重新运行“重新打开Dev Container”过程。
 
-9. 完成。
+1. 完成。
 
 一旦镜像被拉取并构建完成，你应该能够在容器中看到你的项目，并且已经安装了所有需要的依赖项，可以开始开发了。
 
