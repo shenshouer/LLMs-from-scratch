@@ -1,20 +1,20 @@
-# Additional Experiments Classifying the Sentiment of 50k IMDB Movie Reviews
+# 使用50k IMDB电影评论的情感分类进行额外实验
 
 &nbsp;
-## Step 1: Install Dependencies
+## 第1步: 安装依赖
 
-Install the extra dependencies via
+通过以下命令安装额外的依赖:
 
 ```bash
 pip install -r requirements-extra.txt
 ```
 
 &nbsp;
-## Step 2: Download Dataset
+## 第2步: 下载数据集
 
-The codes are using the 50k movie reviews from IMDb ([dataset source](https://ai.stanford.edu/~amaas/data/sentiment/)) to predict whether a movie review is positive or negative.
+代码使用IMDb的50k电影评论数据集([数据集来源](https://ai.stanford.edu/~amaas/data/sentiment/))来预测电影评论是正面还是负面。
 
-Run the following code to create the `train.csv`, `validation.csv`, and `test.csv` datasets:
+运行以下代码来创建`train.csv`, `validation.csv`, 和 `test.csv` 数据集:
 
 ```bash
 python download-prepare-dataset.py
@@ -22,9 +22,9 @@ python download-prepare-dataset.py
 
 
 &nbsp;
-## Step 3: Run Models
+## 第3步: 运行模型
 
-The 124M GPT-2 model used in the main chapter, starting for the pretrained weights and only training the last transformer block plus output layers:
+在主章中使用的大语言模型, 使用预训练权重仅训练最后Transformer块和输出层:
 
 ```bash
 python train-gpt.py
@@ -60,7 +60,7 @@ Test accuracy: 89.96%
 
 ---
 
-A 66M parameter encoder-style [DistilBERT](https://arxiv.org/abs/1910.01108) model (distilled down from a 340M parameter BERT model), starting for the pretrained weights and only training the last transformer block plus output layers:
+一个66M参数的编码器风格的[DistilBERT](https://arxiv.org/abs/1910.01108)模型(从340M参数的BERT模型中蒸馏得到), 使用预训练权重仅训练最后Transformer块和输出层:
 
 
 ```bash
@@ -98,7 +98,7 @@ Test accuracy: 90.81%
 
 ---
 
-A 355M parameter encoder-style [RoBERTa](https://arxiv.org/abs/1907.11692) model, starting for the pretrained weights and only training the last transformer block plus output layers:
+一个355M参数的编码器风格的[RoBERTa](https://arxiv.org/abs/1907.11692)模型, 使用预训练权重仅训练最后Transformer块和输出层:
 
 
 ```bash
@@ -107,7 +107,7 @@ python train-bert-hf.py --bert_model roberta
 
 ---
 
-A scikit-learn Logistic Regression model as a baseline.
+一个scikit-learn的Logistic Regression模型作为基准模型.
 
 ```bash
 python train-sklearn-logreg.py
