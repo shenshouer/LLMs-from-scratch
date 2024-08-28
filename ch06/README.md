@@ -1,11 +1,11 @@
-# Chapter 6: Finetuning for Classification
+# 章节6 分类任务的微调
 
 
-## Main Chapter Code
+## 主章代码
 
-- [01_main-chapter-code](01_main-chapter-code) contains the main chapter code
+- [01_main-chapter-code](01_main-chapter-code) 包含本章的主要代码
 
-## Bonus Materials
+## 附加资料
 
-- [02_bonus_additional-experiments](02_bonus_additional-experiments) includes additional experiments (e.g., training the last vs first token, extending the input length, etc.)
-- [03_bonus_imdb-classification](03_bonus_imdb-classification) compares the LLM from chapter 6 with other models on a 50k IMDB movie review sentiment classification dataset
+- [02_bonus_additional-experiments](02_bonus_additional-experiments) 包含额外的实验(例如,训练最后一个或第一个标记,扩展输入长度等)
+- [03_bonus_imdb-classification](03_bonus_imdb-classification) 将第6章的大语言模型与其他模型在50k IMDB电影评论情感分类数据集上进行比较
