@@ -1,6 +1,6 @@
-# Generating a Dataset for Instruction Finetuning
+# 生成用于指令微调的数据集
 
-This folder contains utility code that can be used for generating a dataset for instruction finetuning.
+本文件夹包含用于生成用于指令微调的数据集的实用代码。
 
-- [llama3-ollama.ipynb](llama3-ollama.ipynb): A notebook that creates a synthetic instruction finetuning dataset using Llama 3 and Ollama
+- [llama3-ollama.ipynb](llama3-ollama.ipynb): 使用Llama 3和Ollama生成合成指令微调数据集的notebook
 
